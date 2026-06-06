@@ -1,7 +1,7 @@
 import { io } from "socket.io-client";
 import { useEffect, useRef, useState } from "react";
 
-const socket = io("http://localhost:3001");
+const socket = io(import.meta.env.VITE_SERVER_URL || "http://localhost:3001");
 
 type Player = {
   id: string;
